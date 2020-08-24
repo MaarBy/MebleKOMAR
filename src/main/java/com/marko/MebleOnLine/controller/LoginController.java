@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
@@ -46,7 +47,7 @@ public class LoginController {
 	public String logout(SessionStatus session) {
 		SecurityContextHolder.getContext().setAuthentication(null);
 		session.setComplete();
-		return "redirect:/";
+		return "redirect:/wylogowany";
 	}
 
 	@PostMapping("/logowanie")
@@ -75,9 +76,26 @@ public class LoginController {
 		return "redirect:/";
 	}
 
+	
+//	dodatek
+//	
+//	
+//	
+//	@RequestMapping(value = "/postLogin", method = RequestMethod.POST)
+//    public String postLogin(Model model, HttpSession session) {
+//        // read principal out of security context and set it to session
+//        UsernamePasswordAuthenticationToken authentication = (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+//        validatePrinciple(authentication.getPrincipal());
+//        User loggedInUser = ((DefaultUserDetails) authentication.getPrincipal()).getUserDetails();
+//        model.addAttribute("currentUser", loggedInUser.getEmailAdress());
+//        session.setAttribute("userId", loggedInUser.getId());
+//        return "redirect:/";
+//    }
+	
+	
 	private void validatePrinciple(Object principal) {
 		if (!(principal instanceof MyUserDetails)) {
-			throw new IllegalArgumentException("Principal can not be null!");
+			throw new IllegalArgumentException("Not null!");
 		}
 	}
 
@@ -99,7 +117,19 @@ public class LoginController {
 	
 	@GetMapping("/admin")
 	public String admin() {
-		return "adminPanel";
+		return "admin";
 	}
+	
+	@GetMapping("/wylogowany")
+	public String wylogowany() {
+		return "wylogowany";
+	}
+	
+	@GetMapping("/zalogowany")
+	public String zalogowany() {
+		return "zalogowany";
+	}
+	
+	
 
 }

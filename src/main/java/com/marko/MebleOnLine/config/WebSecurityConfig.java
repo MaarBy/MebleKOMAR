@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -48,8 +49,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-		http.authorizeRequests()
-		.antMatchers("/admin").hasRole("ADMIN")
+		http
+		.authorizeRequests()
+//		.antMatchers("/admin").hasRole("ADMIN")
+//		.antMatchers("/produkty").access("hasRole('USER')")
 		.antMatchers("/produkty").hasRole("ADMIN")
 		.antMatchers("/dodajProdukt").hasRole("ADMIN")
 		.antMatchers("/usunProdukt").hasRole("ADMIN")
@@ -58,9 +61,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/koszyk").hasRole("USER")
 		.antMatchers("/usunZKoszyka").hasRole("USER")
 		.anyRequest().permitAll()
+//		.anyRequest().authenticated()
 		.and().formLogin().loginPage("/logowanie").usernameParameter("email").passwordParameter("haslo").permitAll()
 		.and().logout().logoutUrl("/wyloguj").permitAll();
-	
+	http
+		.formLogin()
+		   .loginPage("/logowanie")
+		   .defaultSuccessUrl("/default", true)
+		   .permitAll();
 	
 	}
 }
