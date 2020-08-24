@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" th:href="@{/Style.css}"/>
+<style>
+body  {
+  background-image: url("/images/meblesalon11.png");
+  padding: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<title>Meble Online</title>
+</head>
+<body>
+		<div class="header">
+
+		<div class="logo" align="center">
+				<img src="/images/logo.png" width="325">		
+			</div>
+				<div class="sticky">
+			
+	<section>
+		<nav>
+			<ul>
+					<li><a href="/salon">Salon</a></li>
+					<li><a href="/sypialnia">Sypialnia</a></li>
+					<li><a href="/pokojDzieciecy">Pokój Dziecięcy</a></li>
+					<li><a class="active" href="/produkty">Produkty</a></li>
+					<li><a href="/kontakt">TuBedaUzytkownicy</a></li>
+					<li><a href="/wyloguj">Wyloguj</a></li>
+				</ul>
+			</nav>
+			</section>
+		</div>
+	</div>
+		<div class="prods">
+
+	<form th:action="@{/edytujProdukt}" method="post">
+
+			<input type="text" name="id" id="id" th:value="${produkt.id}" hidden />
+			
+			<label for="kategoria">Kategoria:</label>
+			<select name="kategoria" id="kategoria">
+				<option value="salon" th:if="${produkt.kategoria == 'salon'}" selected>Salon</option>
+				<option value="salon" th:unless="${produkt.kategoria == 'salon'}">Salon</option>
+				
+				<option value="sypialnia" th:if="${produkt.kategoria == 'sypialnia'}" selected>Sypialnia</option>
+				<option value="sypialnia" th:unless="${produkt.kategoria == 'sypialnia'}">Sypialnia</option>
+				
+				<option value="pokoj_dzieciecy" th:if="${produkt.kategoria == 'pokoj_dzieciecy'}" selected>Pokój dziecięcy</option>
+				<option value="pokoj_dzieciecy" th:unless="${produkt.kategoria == 'pokoj_dzieciecy'}">Pokój dziecięcy</option>
+			</select>
+			
+			<br>
+			<br>
+			<label for="nazwa">Nazwa:</label>
+			<input type="text" name="nazwa" id="nazwa" th:value="${produkt.nazwa}" required />
+			<br>
+			<label for="opis">Opis:</label>
+			<br>
+			<textarea name="opis" id="opis" rows="20" cols="100" th:text="${produkt.opis}" required></textarea>
+			<br>
+			<br>
+			
+			<label for="cena">Cena:</label>
+			<input type="text" name="cena" id="cena" th:value="${produkt.cena} + zl" required />
+
+			<br>
+			<br>
+						<input class="btn btn-success" type="submit" value="Edytuj produkt">
+			
+			
+			</div>
+	</form>
+</body>
+</html>

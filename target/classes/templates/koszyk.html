@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="Style.css">
+<style>
+body  {
+  background-image: url("images/meblesalon11.png");
+  padding: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;  
+}
+</style>
+<title>Meble Online</title>
+</head>
+<body>
+		<div class="header">
+
+		<div class="logo" align="center">
+				<img src="images/logo.png" width="325">		
+			</div>
+				<div class="sticky">
+			
+	<section>
+		<nav>
+			<ul>
+					<li><a href="/">Strona główna</a></li>
+					<li><a href="/salon">Salon</a></li>
+					<li><a href="/sypialnia">Sypialnia</a></li>
+					<li><a href="/pokojDzieciecy">Pokój Dziecięcy</a></li>
+					<li><a href="/rejestracja">Rejestracja</a></li>
+					<li><a href="/logowanie">Logowanie</a></li>
+					<li><a class="active" href="/koszyk">Koszyk</a></li>
+					<li><a href="/kontakt">Kontakt</a></li>
+					<li><a href="/wyloguj">Wyloguj</a></li>
+				</ul>
+			</nav>
+			</section>
+		</div>
+	</div>
+			<div class="prods">	
+		<table>
+		<tr>
+			<th>Kategoria</th>
+			<th>Nazwa</th>
+			<th>Opis</th>
+			<th>Cena</th>
+			<th></th>
+		</tr>
+
+		<tr th:each="produkt : ${produkty}">
+			<td><span th:text="${produkt.kategoria}"></span></td>
+			<td><span th:text="${produkt.nazwa}"></span></td>
+			<td><span th:text="${produkt.opis}"></span></td>
+			<td><span th:text="${produkt.cena} + zl"></span></td>
+			<th>
+				<form th:action="@{usunZKoszyka}" method="post">
+					<input type="hidden" name="id" th:value="${produkt.id}" />
+					<button th:action="@{usunZKoszyka}" class="btn btn-danger"> <i class="fa fa-arrow-right" ></i>&nbsp;Usun z koszyka</button>
+					
+			</table>
+			</th>
+		</tr>
+			</div>
+	<br>
+			<div class="bato">
+		<p><h3>Do zaplaty: <span th:text="${suma} + zl"></span></h3>
+		<br>
+		</p>
+		<button onclick="alert('Zakupiono!')" class="btn btn-success btn-lg"> <i class="fa fa-refresh fa-spin" style="font-size:20px"></i>&nbsp;&nbsp;Zaplac i przejdz dalej&nbsp;&nbsp;<i class="fa fa-cc-visa" style="font-size:20px;color:darkblue"></i></button>
+		</div>
+</body>
+</html>

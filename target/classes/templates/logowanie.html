@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="Style.css">
+<style>
+body  {
+  background-image: url("logowanie.png");
+
+  padding: 25px;
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<title>Strona do logowania</title>
+</head>
+<body>
+		<div class="header">
+
+		<div class="logo" align="center">
+			<img src="images/logo.png" width="325">		
+		</div>
+<div class="sticky">
+	<section>
+		<nav>
+			<ul>
+			<li><a href="/">Strona główna</a></li>
+					<li><a href="/salon">Salon</a></li>
+					<li><a href="/sypialnia">Sypialnia</a></li>
+					<li><a href="/pokojDzieciecy">Pokój Dziecięcy</a></li>
+					<li><a href="/rejestracja">Rejestracja</a></li>
+					<li><a class="active" href="/logowanie">Logowanie</a></li>
+					<li><a href="/koszyk">Koszyk</a></li>
+					<li><a href="/kontakt">Kontakt</a></li>
+					<li><a href="/wyloguj">Wyloguj</a></li>
+			</ul>
+		</nav>
+	</section>
+</div>
+</div>
+<div class="login-box">
+	<form th:action="@{logowanie}"  method="post">
+		<div class="container">
+			<label for="e-mail"><b>e-mail:</b></label> <input type="email"
+				placeholder="podaj adres e-mail" name="email" required> 
+				<p></p>
+			<label	for="haslo"><b>hasło:</b></label> <input type="password"
+				placeholder="podaj haslo" name="haslo" required>
+			<p></p>
+			<br>
+			<br>
+			<input class="btn btn-success" type="submit" value="Zaloguj">
+		</div>
+	</form>
+	
+	</div>
+	
+</body>
+</html>

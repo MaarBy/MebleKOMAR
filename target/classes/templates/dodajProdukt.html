@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="Style.css">
+<style>
+body  {
+  background-image: url("images/meblesalon11.png");
+  padding: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<title>Meble Online</title>
+</head>
+<body>
+		<div class="header">
+
+		<div class="logo" align="center">
+				<img src="images/logo.png" width="325">		
+			</div>
+				<div class="sticky">
+			
+	<section>
+		<nav>
+			<ul>
+					<li><a href="/salon">Salon</a></li>
+					<li><a href="/sypialnia">Sypialnia</a></li>
+					<li><a href="/pokojDzieciecy">Pokój Dziecięcy</a></li>
+					<li><a class="active" href="/produkty">Produkty</a></li>
+					<li><a href="/kontakt">TuBedaUzytkownicy</a></li>
+					<li><a href="/wyloguj">Wyloguj</a></li>
+				</ul>
+			</nav>
+			</section>
+		</div>
+	</div>
+		<div class="prods">
+
+	<form th:action="@{dodajProdukt}" method="post">
+
+			<label for="kategoria">Kategoria:</label>
+			<select name="kategoria" id="kategoria">
+				<option value="salon">Salon</option>
+				<option value="sypialnia">Sypialnia</option>
+				<option value="pokoj_dzieciecy">Pokój dziecięcy</option>
+			</select>
+			
+			<br>
+			<br>
+			<label for="nazwa">Nazwa:</label>
+			<input type="text" placeholder="podaj nazwę" name="nazwa" id="nazwa" required />
+			<br>
+			<label for="opis">Opis:</label>
+			<br/>
+			<textarea placeholder="uzupełnij opis" name="opis" id="opis" rows="20" cols="100" required></textarea>
+			<br/>
+			
+			<label for="cena">Cena:</label>
+			<input type="number" placeholder="podaj cenę" name="cena" id="cena" cols="20" required />
+			<br>
+			<br>
+			<input class="btn btn-success" type="submit" value="Dodaj produkt">
+		</div>
+		<!-- --- 	<button type="submit" class="btn btn-success btn-lg"> <i class="fa fa-arrow-right" ></i>&nbsp;&nbsp;Dodaj produkt</button>  -->
+	</form>
+</body>
+</html>
+	
