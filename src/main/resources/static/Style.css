@@ -6,7 +6,22 @@
 	box-sizing: border-box;	
 }	
 
-
+ul.mainNav {
+ list-style-type: none;	
+  margin: 0;	
+  padding: 0;	
+  background-color: #750000;	
+  font-size: 18px;	
+  height: 100%;	
+  display: inline-block;
+ }
+ 
+ul.mainNav > li {
+ float: left;	
+  border-right:1px solid #c0c0c0;	
+  width: auto;	
+ 
+}
 
 ul {	
   list-style-type: none;	
@@ -24,49 +39,52 @@ li {
 
 li:last-child {	
   border-right: none;	
-
 }	
+
+.mainNav li:last-child {	
+  border-right: none;	
+}
+	
+.mainNav li a:hover:not(.active) {	
+  background-color: #ce0000;	
+  color: white;	
+  text-decoration: none;	
+}
 
 li a {	
   display: block;	
   color: lightgrey;	
   padding: 20px 25px;	
   text-decoration: none !important;	
-
-
 }	
 
 li a:hover:not(.active) {	
   background-color: #c0c0c0;	
   color: black;	
   text-decoration: none;	
-
 }	
-
-
-
+li a:hover {	
+  background-color: #009100;	
+  color: white;	
+  text-decoration: none;	
+}	
 
 ul > li	{	
   float: left;	
   border-right:1px solid #bbb;	
   width: auto;	
-
 }	
-
-
 
 .active {	
   background-color: #4CAF50;	
-}	
+}
+	
+	
 
 .login-box	
 {	
-
-
 	position:absolute;	
-
 	top:65%;	
-
 	left:50%;	
 	background-color:#4CAF50;	
 	transform:translate(-50%,-50%);	
@@ -76,7 +94,6 @@ ul > li	{
 	padding:50px;	
 	border-radius:5px;	
 	opacity: 90%;	
-
 	-webkit-box-shadow:10px 10px 80px 50px rgba(204,204,204,009);	
 	-moz-box-shadow:3px 3px 30px 5px rgba(204,204,204,009);	
 	box-shadow:3px 3px 30px 5px rgba(204,204,204,009);	
@@ -85,9 +102,7 @@ ul > li	{
 .registration-box	
 {	
 	position:absolute;	
-
 	top:75%;	
-
 	left:50%;	
 	background-color:#4CAF50;	
 	transform:translate(-50%,-50%);	
@@ -97,19 +112,15 @@ ul > li	{
 	padding:50px;	
 	border-radius:5px;	
 	opacity: 90%;	
-
 	-webkit-box-shadow:10px 10px 80px 50px rgba(204,204,204,009);	
 	-moz-box-shadow:3px 3px 30px 5px rgba(204,204,204,009);	
 	box-shadow:3px 3px 30px 5px rgba(204,204,204,009);	
-
 }	
 
 .contact-box	
 {	
 	position:absolute;	
-
 	top:75%;	
-
 	left:50%;	
 	background-color:#4CAF50;	
 	transform:translate(-50%,-50%);	
@@ -119,11 +130,9 @@ ul > li	{
 	padding:50px;	
 	border-radius:5px;	
 	opacity: 90%;	
-
 	-webkit-box-shadow:10px 10px 80px 50px rgba(204,204,204,009);	
 	-moz-box-shadow:3px 3px 30px 5px rgba(204,204,204,009);	
 	box-shadow:3px 3px 30px 5px rgba(204,204,204,009);	
-
 }	
 
 .text-box	
@@ -139,33 +148,27 @@ ul > li	{
 	padding:100px;	
 	border-radius:5px;	
 	opacity: 90%;	
-
 	-webkit-box-shadow:10px 10px 80px 50px rgba(204,204,204,009);	
 	-moz-box-shadow:3px 3px 30px 5px rgba(204,204,204,009);	
 	box-shadow:3px 3px 30px 5px rgba(204,204,204,009);	
-
 }	
-
-
-
 
 label	
 {	
-font-size:1.0rem;	
-cursor:pointer;		
+	font-size:1.0rem;	
+	cursor:pointer;		
 }	
 
 button[type=submit]	
 {	
 	width:275px;	
-	background-color:#20ccdf;	
+	background-color:#005500;	
 	font-size:20px;	
 	padding:5px 10px;	
 	border:none;	
 	border-radius:5px;	
 	cursor:pointer;	
 }	
-
 
 div.gallery {	
   margin: 5px;	
@@ -188,13 +191,10 @@ div.desc {
   text-align: center;	
 }	
 
-
-
 .header{	
 
   margin-bottom: 40px;	
   text-decoration: none !important;	
-
 }	
 
 .sticky {	
@@ -204,27 +204,22 @@ div.desc {
   opacity: 80%;	
   text-align: center;	
   text-decoration: none !important;	
-
-
-
 }	
 
 .bato{	
   float: right;	
-
 }	
+
 .prods{	
   font: 17px Lato;	
   display: flex;	
     flex-wrap: wrap;	
     justify-content: space-around;	
-
 }	
 
 table, td, th {	
   border: 1px solid black;	
   padding: 3px;	
-
 }	
 
 table, tr {	
@@ -232,29 +227,25 @@ table, tr {
   width: 90%;	
   background: lightgrey;	
   opacity: 85%;	
-
 }	
 
 th {	
   height: 20px;	
-
-}	
+}
+	
 input	
 {	
-
 	width:92%;	
 	background-color:#efefef;	
-	color:#666;	
+	color:#667;	
 	border:2px solid #ddd;	
 	border-radius:5px;	
 	font-size:15px;	
 	padding:10px;	
-
 }	
 
 .form-input-box	
 {	
-
 }	
 
 p{	
