@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="Style.css">
+<style>
+body  {
+  background-image: url("images/meblesalon11.png");
+  padding: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<title>Meble Online</title>
+</head>
+<body>
+		<div class="header">
+
+		<div class="logo" align="center">
+				<img src="images/logo.png" width="325">		
+			</div>
+				<div class="sticky">
+			
+	<section>
+		<nav>
+			<ul class="mainNav">
+			<!-- 	<li><a href="/salon">Salon</a></li>
+					<li><a href="/sypialnia">Sypialnia</a></li>
+					<li><a href="/pokojDzieciecy">Pokój Dziecięcy</a></li>	 -->
+					<li ><a href="/produkty">Produkty</a></li>
+					<li ><a class="active" href="/uzytkownicy">Uzytkownicy</a></li>
+					<li ><a href="/wyloguj">Wyloguj</a></li>
+			</ul>
+		</nav>
+	</section>
+	</div>
+	</div>
+	
+		<div class="prods">
+
+	<table style="width: 100%">
+		<tr>
+			<th>Id</th>
+			<th>Imie</th>
+			<th>Nazwisko</th>
+			<th>Email</th>
+			<th>Haslo</th>
+			<th></th>
+		</tr>
+	<br>
+	<br>
+		<tr th:each="uzytkownik : ${uzytkownicy}">
+			<td><span th:text="${uzytkownik.id}"></span></td>
+			<td><span th:text="${uzytkownik.imie}"></span></td>
+			<td><span th:text="${uzytkownik.nazwisko}"></span></td>
+			<td><span th:text="${uzytkownik.email}"></span></td>
+			<td><span th:text="${uzytkownik.haslo}"></span></td>
+			<th>
+				<form th:action="@{usunUzytkownik}" method="post">
+					<input type="hidden" name="id" th:value="${uzytkownik.id}" />
+					<button type="submit" class="btn btn-danger"> Usun</button>
+		<!--  			<a th:href="@{edytujUzytkownik/__${uzytkownik.id}__}" class="btn btn-warning"> Edytuj</a>  -->
+					<a th:action="@{edytujUzytkownik/__${uzytkownik.id}__}" class="btn btn-warning" disabled> Edytuj</a>
+				</form> 
+			</th>
+		</tr>
+	</table>
+	</div>
+
+</body>
+</html>

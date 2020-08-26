@@ -30,7 +30,7 @@ body  {
 					<li><a href="/sypialnia">Sypialnia</a></li>
 					<li><a href="/pokojDzieciecy">Pokój Dziecięcy</a></li>	 -->
 					<li ><a class="active" href="/produkty">Produkty</a></li>
-					<li ><a href="/kontakt">TuBedaUzytkownicy</a></li>
+					<li ><a href="/uzytkownicy">Uzytkownicy</a></li>
 					<li ><a href="/wyloguj">Wyloguj</a></li>
 			</ul>
 		</nav>
@@ -60,7 +60,7 @@ body  {
 			<th>
 				<form th:action="@{usunProdukt}" method="post">
 					<input type="hidden" name="id" th:value="${produkt.id}" />
-			<button type="submit" class="btn btn-danger"> Usun</button>
+			<button type="submit" class="btn btn-danger" > Usun</button>
 					
 						<!-- -<a th:href="usunProdukt" class="btn btn-danger"> <i class="fa fa-arrow-circle-o-right" ></i>&nbsp;Usun</a> -->
 						<a th:href="@{edytujProdukt/__${produkt.id}__}" class="btn btn-warning"> Edytuj</a>
