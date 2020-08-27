@@ -16,11 +16,25 @@ ul.mainNav {
   display: inline-block;
  }
  
-ul.mainNav > li {
+mainNav > li {
  float: left;	
   border-right:1px solid #c0c0c0;	
   width: auto;	
+}
+
+mainNavy {
+ list-style-type: none;	
+  margin: 0;	
+  padding: 0;	
+  background-color: #ff8041;	
+  font-size: 18px;	
+  height: 100%;	
+ }
  
+.mainNavy > li {
+ float: left;	
+  border-right:1px solid #ff00ff;	
+  width: auto;	
 }
 
 ul {	
@@ -42,10 +56,22 @@ li:last-child {
 }	
 
 .mainNav li:last-child {	
-  border-right: none;	
+  border-right: none;
+    background-color: #750000;	  	
+}
+.mainNavy li:last-child {	
+  border-right: none;
+    background-color: #000080;	  	
 }
 	
 .mainNav li a:hover:not(.active) {	
+  background-color: #ce0000;	
+  color: white;	
+  text-decoration: none;	
+}
+
+
+.mainNavy li a:hover:not(.active) {	
   background-color: #ce0000;	
   color: white;	
   text-decoration: none;	
@@ -71,7 +97,7 @@ li a:hover {
 
 ul > li	{	
   float: left;	
-  border-right:1px solid #bbb;	
+  border-right:2px solid #bbb;	
   width: auto;	
 }	
 
@@ -161,9 +187,8 @@ label
 
 button[type=submit]	
 {	
-	width:275px;	
-	background-color:#005500;	
-	font-size:20px;	
+	width:75px;	
+	font-size:17px;	
 	padding:5px 10px;	
 	border:none;	
 	border-radius:5px;	

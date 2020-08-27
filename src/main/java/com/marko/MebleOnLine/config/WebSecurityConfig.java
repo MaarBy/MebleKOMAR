@@ -1,6 +1,7 @@
 package com.marko.MebleOnLine.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -13,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+@Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -54,16 +56,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //		.antMatchers("/admin").hasRole("ADMIN")
 //		.antMatchers("/produkty").access("hasRole('USER')")
 		.antMatchers("/produkty").hasRole("ADMIN")
+		.antMatchers("/uzytkownicy").hasRole("ADMIN")
 		.antMatchers("/dodajProdukt").hasRole("ADMIN")
+		.antMatchers("/dodajUzytkownik").hasRole("ADMIN")
 		.antMatchers("/usunProdukt").hasRole("ADMIN")
+		.antMatchers("/usunUzytkownik").hasRole("ADMIN")
 		.antMatchers("/edytujProdukt/**").hasRole("ADMIN")
+		.antMatchers("/edytujUzytkownik/**").hasRole("ADMIN")
 		.antMatchers("/dodajDoKoszyka").hasRole("USER")
 		.antMatchers("/koszyk").hasRole("USER")
 		.antMatchers("/usunZKoszyka").hasRole("USER")
 		.anyRequest().permitAll()
 //		.anyRequest().authenticated()
 		.and().formLogin().loginPage("/logowanie").usernameParameter("email").passwordParameter("haslo").permitAll()
-		.and().logout().logoutUrl("/wyloguj").permitAll();
+		.and().logout().logoutUrl("/wyloguj").permitAll()
+		.and().exceptionHandling().accessDeniedPage("/403");
+		
 	http
 		.formLogin()
 		   .loginPage("/logowanie")
