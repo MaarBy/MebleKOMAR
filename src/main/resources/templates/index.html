@@ -32,9 +32,78 @@ body  {
 					<li><a href="/koszyk">Koszyk</a></li>
 					<li><a href="/kontakt">Kontakt</a></li>
 					<li><a href="/wyloguj">Wyloguj</a></li>
-				</ul>
-			</nav>
+</ul>
+			<ul>
+			<div class="mainNavy">				
+				<li><a action="action" type="button" onclick="history.go(-1);">Wstecz</a></li>					
+</ul>			</nav>
+		
+			</div>
+		
+		<div id="MainPanel" align="center">
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<table class="table1">
+			<tr class="table1">
+				<td class="table1">
+					<div id="slideshow" align="center" >
+
+						<img class="mySlides" src="/images/slajd1.png">
+						<img class="mySlides" src="/images/slajd2.png">
+						<img class="mySlides" src="/images/slajd3.png">
+						<img class="mySlides" src="/images/slajd4.png">
+						<img class="mySlides" src="/images/slajd5.png">
+						<img class="mySlides" src="/images/slajd6.png">
+						<img class="mySlides" src="/images/slajd7.png">
+						<img class="mySlides" src="/images/slajd8.png">
+			
+						<script>
+							var slideIndex = 0;
+							carousel();
+
+							function carousel() {
+								var i;
+								var x = document
+										.getElementsByClassName("mySlides");
+								for (i = 0; i < x.length; i++) {
+									x[i].style.display = "none";
+								}
+								slideIndex++;
+								if (slideIndex > x.length) {
+									slideIndex = 1
+								}
+								x[slideIndex - 1].style.display = "block";
+								setTimeout(carousel, 3300); // Change image every 2.5 seconds
+							}
+						</script>
+
+					</div>
+				</td>
+
+				<td class="table1">
+					<div id="txtIndex">
+						Serdecznie zapraszamy, zapoznaj sie z nasza przebogata oferta mebli oraz innych klamotow. 
+						<br>Oferujemy produkty unikatowe, od najtanszych (znalezionych na wystawkach) po ekskluzywne fortepiany.
+						Kazdy produkt jest przez nas dokladnie oceniany pod wzgledem przydatnosc do uzytkowania.
+						Te najlepsze umieszczamy we wlasnych lokalach mieszkalnych a nastepnie windujemy ich ceny, 
+						tak, abyscie czuli ze kupujecie cos wyjatkowego(bo drogiego).
+						<br><br>
+						Zapraszamy do zakupow, szczegolnie posiadaczy grubych portfeli, a to dlatego, ze ...
+						tanio nie bedzie.<br>
+						</li> <br> Osoby o wyjatkowej checi uszczuplenia portfela, zapraszamy do kontaku poprzez formularz <a href="kontakt">kontakt</a>
+						, ktory udostepnimy niebawem(prawdopodobnie w przyszlym stuleciu.
+					
+
+					</div>
+				</td>
+			</tr>
 		</section>
+
+
+		</table>
 	</div>
 	</div>
 

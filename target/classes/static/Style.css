@@ -244,13 +244,13 @@ div.desc {
 
 table, td, th {	
   border: 1px solid black;	
-  padding: 3px;	
+  padding: 5px;	
 }	
 
 table, tr {	
   border-collapse: collapse;	
-  width: 90%;	
-  background: lightgrey;	
+  width: 76%;	
+  background: white;	
   opacity: 85%;	
 }	
 
@@ -276,3 +276,42 @@ input
 p{	
 	text-align:left;	
 } 
+
+
+
+
+
+
+table.table1, th.table1, td.table1 {
+	border-collapse: collapse;
+	float: center;
+	background: linear-gradient(to bottom right, lightgrey, grey);
+	opacity:96%;
+}
+
+th.table1, td.table1 {
+	width: 40%;
+	  height: 440px;
+	
+}
+
+#txtIndex {
+	font: 17px Lato;
+	border-width: 4px;
+	margin-left: 3%;
+	margin-right: 3%;
+	border-style: solid;
+	padding: 4%;
+	border-style: outset;
+	border-color: #4CAF50;
+	text-align: left;
+	width: 460px;
+	color: black;
+}
+
+
+
+
+
+
+
