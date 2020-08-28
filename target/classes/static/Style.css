@@ -222,7 +222,7 @@ div.desc {
   text-decoration: none !important;	
 }	
 
-.sticky {	
+div.sticky {	
   position: -webkit-sticky;	
   position: sticky;	
   font: 18px Lato;	
@@ -238,25 +238,36 @@ div.desc {
 .prods{	
   font: 17px Lato;	
   display: flex;	
-    flex-wrap: wrap;	
-    justify-content: space-around;	
+  flex-wrap: wrap;	
+  justify-content: space-around;
+  
 }	
+
 
 table, td, th {	
   border: 1px solid black;	
-  padding: 5px;	
+  padding: 7px;
+  	
 }	
 
 table, tr {	
   border-collapse: collapse;	
   width: 76%;	
-  background: white;	
-  opacity: 85%;	
+  background: grey;	
+  	
+}
+tr{
+	text-align: center;
+	background: linear-gradient(to bottom right, lightgrey, grey);
 }	
 
 th {	
-  height: 20px;	
+  height: 20px;
+  	text-align: center;
+  
 }
+
+
 	
 input	
 {	
@@ -310,8 +321,16 @@ th.table1, td.table1 {
 }
 
 
+.image {
+    transition: transform .3s; /* Animation */
+    margin: 0 auto;
+    border-color: #4CAF50;
+    border:2px solid darkgrey;
+}
 
-
-
+.image:hover {
+  transform: scale(1.8); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  border:2px solid #4CAF50;
+}
 
 

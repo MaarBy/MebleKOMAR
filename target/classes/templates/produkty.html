@@ -43,6 +43,7 @@ body  {
 	<table style="width: 100%">
 		<tr>
 			<th>Id</th>
+			<th>Zdjecie</th>
 			<th>Kategoria</th>
 			<th>Nazwa</th>
 			<th>Opis</th>
@@ -53,6 +54,7 @@ body  {
 	<br>
 		<tr th:each="produkt : ${produkty}">
 			<td><span th:text="${produkt.id}"></span></td>
+			<td><span th:text="${produkt.zdjecie}"></span></td>
 			<td><span th:text="${produkt.kategoria}"></span></td>
 			<td><span th:text="${produkt.nazwa}"></span></td>
 			<td><span th:text="${produkt.opis}"></span></td>

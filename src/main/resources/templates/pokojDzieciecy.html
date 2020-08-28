@@ -46,6 +46,7 @@ body  {
 		<div class="prods">
 		<table>
 			<tr>
+				<th>Zdjecie</th>
 				<th>Nazwa</th>
 				<th>Opis</th>
 				<th>Cena</th>
@@ -53,6 +54,7 @@ body  {
 			</tr>
 
 			<tr th:each="produkt : ${produkty}">
+				<td><img class="image" th:src="${produkt.zdjecie}" alt="debi" style="width:375px;height:250px"></td>
 				<td><span th:text="${produkt.nazwa}"></span></td>
 				<td><span th:text="${produkt.opis}"></span></td>
 				<td><span th:text="${produkt.cena} + zl"></span></td>

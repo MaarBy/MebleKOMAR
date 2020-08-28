@@ -55,8 +55,6 @@ public class UzytkownikController {
 	public String usunUzytkownik(@ModelAttribute Uzytkownik uzytkownik) {
 //		uzytkownik.setAuthorities(null);
 //		koszykRepository.deleteById(uzytkownik.getId() -1);
-
-
 		uzytkownikRepository.deleteById(uzytkownik.getId());
 		return "redirect:/uzytkownicy";
 	}

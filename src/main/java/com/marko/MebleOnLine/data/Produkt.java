@@ -17,6 +17,7 @@ public class Produkt {
 	private String nazwa;
 	private String opis;
 	private double cena;
+	private String zdjecie;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "koszyk_id", nullable = true)
@@ -26,14 +27,16 @@ public class Produkt {
 		super();
 	}
 
-	public Produkt(String kategoria, String nazwa, String opis, double cena) {
+	public Produkt(String kategoria, String nazwa, String opis, double cena, String zdjecie) {
 		super();
 		this.kategoria = kategoria;
 		this.nazwa = nazwa;
 		this.opis = opis;
 		this.cena = cena;
+		this.zdjecie = zdjecie;
 	}
 
+	
 	public int getId() {
 		return id;
 	}
@@ -74,6 +77,14 @@ public class Produkt {
 		this.cena = cena;
 	}
 
+	public String getZdjecie() {
+		return zdjecie;
+	}
+
+	public void setZdjecie(String zdjecie) {
+		this.zdjecie = zdjecie;
+	}
+	
 	public Koszyk getKoszyk() {
 		return koszyk;
 	}
