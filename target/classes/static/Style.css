@@ -187,7 +187,7 @@ label
 
 button[type=submit]	
 {	
-	width:75px;	
+	width:67px;	
 	font-size:17px;	
 	padding:5px 10px;	
 	border:none;	
@@ -322,14 +322,14 @@ th.table1, td.table1 {
 
 
 .image {
-    transition: transform .3s; /* Animation */
+    transition: transform .4s; /* Animation */
     margin: 0 auto;
     border-color: #4CAF50;
     border:2px solid darkgrey;
 }
 
 .image:hover {
-  transform: scale(1.8); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.75); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   border:2px solid #4CAF50;
 }
 

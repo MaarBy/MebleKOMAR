@@ -54,7 +54,7 @@ body  {
 	<br>
 		<tr th:each="produkt : ${produkty}">
 			<td><span th:text="${produkt.id}"></span></td>
-			<td><span th:text="${produkt.zdjecie}"></span></td>
+				<td><img class="imagel" th:src="${produkt.zdjecie}" alt="debi" style="width:300px;height:200px"></td>
 			<td><span th:text="${produkt.kategoria}"></span></td>
 			<td><span th:text="${produkt.nazwa}"></span></td>
 			<td><span th:text="${produkt.opis}"></span></td>
