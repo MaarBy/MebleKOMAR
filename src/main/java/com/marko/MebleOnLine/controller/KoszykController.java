@@ -59,7 +59,7 @@ public class KoszykController {
 			koszyk.getProdukty().add(produktDoZapisu);
 			koszykRepository.save(koszyk);
 		}
-		return "redirect:/";
+		return "redirect:/koszyk";
 	}
 
 	@GetMapping("/koszyk")
@@ -102,7 +102,7 @@ public class KoszykController {
 			produktDoUsuniecia.setKoszyk(null);
 			koszykRepository.save(koszyk);
 		}
-		return "redirect:/";
+		return "redirect:/koszyk";
 	}	
 	
 }

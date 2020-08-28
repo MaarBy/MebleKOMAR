@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -18,8 +17,7 @@ public class Produkt {
 	private String kategoria;
 	private String nazwa;
 	
-	@Lob
-	@Column
+	@Column(name = "opis", length=777)
 	private String opis;
 	private double cena;
 	private String zdjecie;
