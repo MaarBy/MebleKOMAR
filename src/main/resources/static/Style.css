@@ -333,4 +333,33 @@ th.table1, td.table1 {
   border:2px solid #4CAF50;
 }
 
+.produkty{
+	background-color:#5e9d96;	
+	text-aligin:center;	
+
+	
+	
+		
+	
+	
+}
+
+.image2 {
+    transition: transform .4s; /* Animation */
+   /* margin: 0 auto;*/
+   	margin-left: 35%;
+   
+   	margin-top:50px;
+	/*margin-right: 50%;*/
+    border-color: #4CAF50;
+    border:2px solid darkgrey;
+    alagin:center;
+}
+
+.info{
+		padding: 2%;
+		margin-left:15%;
+		margin-right:10%;
+}
+
 

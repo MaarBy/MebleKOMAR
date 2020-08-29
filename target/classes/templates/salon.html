@@ -6,12 +6,24 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link rel="stylesheet" type="text/css" href="Style.css">
 <style>
+
+
+
 body  {
+
+
   background-image: url("logowanie.png");
   padding: 25px;
   background-repeat: no-repeat;
   background-size: cover;
+  
+ 
+  
 }
+
+
+
+
 </style>
 <title>Meble Online</title>
 </head>
@@ -44,9 +56,16 @@ body  {
 	</section>
 	</div>
 	</div>
+	
+	
+	<!--  to było przed moją zmianą:
+	
+	*********************************************************************
+	
 		<div class="prods">
-		<table>
-			<tr>
+	 	
+	 	<table>
+			  <tr>
 				<th>Zdjecie</th>
 				<th>Nazwa</th>
 				<th>Opis</th>
@@ -64,12 +83,46 @@ body  {
 						<input type="hidden" name="id" th:value="${produkt.id}" />
 					 <button th:action="@{dodajDoKoszyka}" class="btn btn-success"> <i class="fa fa-arrow-right" ></i>&nbsp;&nbsp;Dodaj do koszyka</button>
 					 <!-- -<button  type="submit" class="btn btn-success btn-lg"><i class="fa fa-arrow-circle-o-right" ></i>&nbsp;Dodaj do koszyka</button> -->
-					
-					</form>
+			</form>
 				</th>
-			</tr>
-
-		</table>
-	</div>
+		</tr>
+			</table>	
+			
+		</div> 
+		
+	<!-- ********************************************************** -->	
+		
+		
+<!--***********************************************************	  -->		
+	<!--to jest po mojej zmianie:  -->
+	
+	
+		<div class="produkty" th:each="produkt : ${produkty}">
+		
+		<img class="image2" th:src="${produkt.zdjecie}" alt="foto" style="width:400px;height:300px;">
+		<br/>
+		<div class="info" align="center">
+		<h2><b><span th:text="${produkt.nazwa}"></span></b></h2>
+		
+		<br/>
+		<span th:text="${produkt.opis}"></span>
+		<br/>
+		<h3><span th:text="${produkt.cena} + 0zł"></span></h3>
+		<br/>
+		
+		<form th:action="@{dodajDoKoszyka}" method="post">
+						<input type="hidden" name="id" th:value="${produkt.id}" />
+					 <button th:action="@{dodajDoKoszyka}" class="btn btn-success"> <i class="fa fa-arrow-right" ></i>&nbsp;&nbsp;Dodaj do koszyka</button>
+					 <!-- -<button  type="submit" class="btn btn-success btn-lg"><i class="fa fa-arrow-circle-o-right" ></i>&nbsp;Dodaj do koszyka</button> -->
+			</form>
+			<br/>
+		</div>
+		<br/>
+		</div>
+		
+		
+	<!-- ***************************************************************** -->	
+		
+	
 </body>
 </html>
