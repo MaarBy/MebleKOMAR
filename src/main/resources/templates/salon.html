@@ -1,29 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link rel="stylesheet" type="text/css" href="Style.css">
 <style>
-
-
-
 body  {
-
-
   background-image: url("logowanie.png");
   padding: 25px;
   background-repeat: no-repeat;
   background-size: cover;
-  
- 
-  
 }
-
-
-
-
 </style>
 <title>Meble Online</title>
 </head>
@@ -33,10 +21,10 @@ body  {
 		<div class="logo" align="center">
 				<img src="images/logo.png" width="325">		
 			</div>
-				<div class="sticky">
+	</div>
 			
-	<section>
-		<nav>
+	<div class="sticky">
+			
 			<ul>
 				<li><a href="/">Strona główna</a></li>
 				<li><a class="active" href="/salon">Salon</a></li>
@@ -51,78 +39,32 @@ body  {
 			<ul>
 			<div class="mainNavy">				
 				<li><a action="action" type="button" onclick="history.go(-1);">Wstecz</a></li>					
-</ul>
-		</nav>
-	</section>
+			</ul>
 	</div>
-	</div>
-	
-	
-	<!--  to było przed moją zmianą:
-	
-	*********************************************************************
-	
 		<div class="prods">
-	 	
-	 	<table>
-			  <tr>
-				<th>Zdjecie</th>
-				<th>Nazwa</th>
-				<th>Opis</th>
-				<th>Cena</th>
-				<th></th>
-			</tr>
+		<table>
+			
 
 			<tr th:each="produkt : ${produkty}">
-				<td><img class="image" th:src="${produkt.zdjecie}" alt="foto" style="width:300px;height:200px"></td>
-				<td><b><span th:text="${produkt.nazwa}"></span></b></td>
-				<td><span th:text="${produkt.opis}"></span></td>
-				<td><span th:text="${produkt.cena} + zl"></span></td>
-				<th>
+				<td><img class="image" th:src="${produkt.zdjecie}" alt="foto" style="width:420px;height:280px"></td>
+				<td><h3><b><span th:text="${produkt.nazwa}"></span></b></h3>
+							
+			<div class="malina">				
+				<span th:text="${produkt.opis}"></span><br><br>
+			</div>
+			
+				<span th:text="${produkt.cena} + zl"></span><br><br>
 					<form th:action="@{dodajDoKoszyka}" method="post">
 						<input type="hidden" name="id" th:value="${produkt.id}" />
 					 <button th:action="@{dodajDoKoszyka}" class="btn btn-success"> <i class="fa fa-arrow-right" ></i>&nbsp;&nbsp;Dodaj do koszyka</button>
 					 <!-- -<button  type="submit" class="btn btn-success btn-lg"><i class="fa fa-arrow-circle-o-right" ></i>&nbsp;Dodaj do koszyka</button> -->
-			</form>
-				</th>
-		</tr>
-			</table>	
-			
-		</div> 
-		
-	<!-- ********************************************************** -->	
-		
-		
-<!--***********************************************************	  -->		
-	<!--to jest po mojej zmianie:  -->
-	
-	
-		<div class="produkty" th:each="produkt : ${produkty}">
-		
-		<img class="image2" th:src="${produkt.zdjecie}" alt="foto" style="width:400px;height:300px;">
-		<br/>
-		<div class="info" align="center">
-		<h2><b><span th:text="${produkt.nazwa}"></span></b></h2>
-		
-		<br/>
-		<span th:text="${produkt.opis}"></span>
-		<br/>
-		<h3><span th:text="${produkt.cena} + 0zł"></span></h3>
-		<br/>
-		
-		<form th:action="@{dodajDoKoszyka}" method="post">
-						<input type="hidden" name="id" th:value="${produkt.id}" />
-					 <button th:action="@{dodajDoKoszyka}" class="btn btn-success"> <i class="fa fa-arrow-right" ></i>&nbsp;&nbsp;Dodaj do koszyka</button>
-					 <!-- -<button  type="submit" class="btn btn-success btn-lg"><i class="fa fa-arrow-circle-o-right" ></i>&nbsp;Dodaj do koszyka</button> -->
-			</form>
-			<br/>
-		</div>
-		<br/>
-		</div>
-		
-		
-	<!-- ***************************************************************** -->	
-		
-	
+					<br><br>
+					</td>
+					</form>
+				
+			</tr>
+
+		</table>
+	</div>
 </body>
 </html>

@@ -60,9 +60,10 @@ body  {
 			<th>
 				<form th:action="@{usunUzytkownik}" method="post">
 					<input type="hidden" name="id" th:value="${uzytkownik.id}" />
-					<button type="submit" class="btn btn-danger"> Usun</button>
+					<button type="submit" class="btn btn-danger" disabled> Usun</button>
 		<!--  			<a th:href="@{edytujUzytkownik/__${uzytkownik.id}__}" class="btn btn-warning"> Edytuj</a>  -->
-					<a th:action="@{edytujUzytkownik/__${uzytkownik.id}__}" class="btn btn-warning" disabled> Edytuj</a>
+					<a th:href="@{edytujUzytkownik/__${uzytkownik.id}__}" class="btn btn-warning" > Edytuj</a>
+					
 				</form> 
 			</th>
 		</tr>
