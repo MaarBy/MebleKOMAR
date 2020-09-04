@@ -53,8 +53,8 @@ public class UzytkownikController {
 	
 	@PostMapping("/usunUzytkownik")
 	public String usunUzytkownik(@ModelAttribute Uzytkownik uzytkownik) {
-//		uzytkownik.setAuthorities(null);
-//		koszykRepository.deleteById(uzytkownik.getId() -1);
+		uzytkownik.isEnabled = !uzytkownik.isEnabled;
+		uzytkownikRepository.save(uzytkownik);
 		uzytkownikRepository.deleteById(uzytkownik.getId());
 		return "redirect:/uzytkownicy";
 	}

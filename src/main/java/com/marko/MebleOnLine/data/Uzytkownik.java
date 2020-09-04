@@ -25,6 +25,7 @@ public class Uzytkownik {
 	private String nazwisko;
 	private String email;
 	private String haslo;
+	public boolean isEnabled;
 
 	@OneToOne(mappedBy = "uzytkownik", cascade = CascadeType.ALL, orphanRemoval = true)
 	private Koszyk koszyk;
@@ -39,12 +40,22 @@ public class Uzytkownik {
 		super();
 	}
 
-	public Uzytkownik(String imie, String nazwisko, String email, String haslo) {
+	public Uzytkownik(String imie, String nazwisko, String email, String haslo, boolean isEnabled) {
 		super();
 		this.imie = imie;
 		this.nazwisko = nazwisko;
 		this.email = email;
 		this.haslo = haslo;
+		this.isEnabled = isEnabled;
+	}
+
+
+	public boolean getIsEnabled() {
+		return isEnabled;
+	}
+
+	public void setIsEnabled(boolean isEnabled) {
+		this.isEnabled = isEnabled;
 	}
 
 	public int getId() {

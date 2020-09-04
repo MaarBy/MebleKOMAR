@@ -30,7 +30,7 @@ body  {
 					<li><a href="/sypialnia">Sypialnia</a></li>
 					<li><a href="/pokojDzieciecy">Pokój Dziecięcy</a></li>	 -->
 					<li><a href="/produkty">Produkty</a></li>
-					<li><a class="active" href="/kontakt">TuBedaUzytkownicy</a></li>
+					<li><a class="active" href="/uzytkownicy">Uzytkownicy</a></li>
 					<li><a href="/wyloguj">Wyloguj</a></li>
 				</ul>
 			</nav>
@@ -59,7 +59,16 @@ body  {
 			<input type="text" name="email" id="email" th:value="${uzytkownik.email}" required />
 			<br>
 			<br>
-						<input class="btn btn-success" type="submit" value="Edytuj uzytkownik">
+			<label for="haslo">Haslo:</label>
+			<input type="text" name="haslo" id="haslo" th:value="${uzytkownik.haslo}" required />
+			<br>
+			<br>
+			<label for="isEnabled">Aktywny:</label>
+			<input type="checkbox" name="isEnabled" class="largeBox" th:checked="${uzytkownik.isEnabled}"/>
+			<br>
+			<br>
+		
+			<input class="btn btn-success" type="submit" value="Edytuj uzytkownik">
 						
 			</div>
 	</form>

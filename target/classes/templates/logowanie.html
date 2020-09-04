@@ -41,6 +41,11 @@ body  {
 	</section>
 	</div>
 </div>
+
+
+<c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}" />
+
+
 <div class="login-box">
 	<form th:action="@{logowanie}"  method="post">
 		<div class="container">

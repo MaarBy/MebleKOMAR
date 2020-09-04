@@ -358,4 +358,7 @@ th.table1, td.table1 {
 }
 
 
-
+input.largeBox { 
+            width: 20px; 
+            height: 20px; 
+        } 
