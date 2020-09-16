@@ -250,7 +250,7 @@ table, tr {
 	font: 18px Lato;	
 	border-collapse: collapse;	
 	width: 80%;	
-	background: radial-gradient(#fff,grey);
+	background: radial-gradient(white,grey);
 	
 	/*background: linear-gradient(to top left, lightgrey, grey);*/
 	margin:30px;
@@ -292,7 +292,7 @@ p{
 table.table1, th.table1, td.table1 {
 	border-collapse: collapse;
 	float: center;
-	background: linear-gradient(to bottom right, lightgrey, grey);
+	background: linear-gradient(to bottom right, white, #efefef);
 	opacity:96%;
 }
 
