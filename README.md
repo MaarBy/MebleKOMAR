@@ -1,6 +1,6 @@
 # MebleKOMAR
 Zaliczeniowy projekt kursu Java Web Developer.
-Jest to projekt Maven.
+Jest to projekt Maven, z uzyciem m.in. Spring + Security, Hibernate, HTML, CSS, PostgreSQL.
 Aplikacja korzysta z AWS, wiec nie ma koniecznosci zakladania lokalnej bazy danych.
 
     Logowanie jako admin:       login: admin@wp.pl  pass: admin
