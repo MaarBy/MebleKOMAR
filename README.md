@@ -9,7 +9,7 @@ Aplikacja korzysta z AWS, więc nie ma konieczności zakładania lokalnej bazy d
 Projekt nie jest zakończony, także mile widziane są wszelkie porady czy uwagi!
 
 
-Zawarte opisy (kontrybutor nie współtworzył ich = jest „czysty”), są w formie satyrycznej i nie maja na celu obrazić kogokolwiek. Tak, zdaję sobie sprawę, że zawartość może, w niektórych przypadkach, przekreślić moją osobę w oczach (nie)pewnych osób. ;)
+Zawarte opisy (kontrybutor nie współtworzył ich = jest „czysty”), są w formie satyrycznej i nie maja na celu obrazić kogokolwiek. Tak, zdaję sobie sprawę, że zawartość może, w niektórych przypadkach, przekreślić moją osobę w oczach (nie)pewnych osób ;)
 
 
     EN: to 🏃 the project, type: 
