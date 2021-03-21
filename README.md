@@ -8,4 +8,6 @@ Aplikacja korzysta z AWS, wiec nie ma koniecznosci zakladania lokalnej bazy dany
 
 Projekt nie jest zakonczony, takze mile widziane sa wszelkie porady czy uwagi!
 
-Zawarte opisy(kontrybutor nie wspoltworzyl ich = jest "czysty"), sa w formie satyrycznej i nie maja na celu obrazac czy ponizac kogokolwiek. Zdaje sobie sprawe, ze zawartosc moze, w niektorych przypadkach, przekreslic moja osobe w procesie rekrutacyjnym, ale, coz, widocznie tak musi byc ;)
+Zawarte opisy(kontrybutor nie wspoltworzyl ich = jest "czysty"), sa w formie satyrycznej i nie maja na celu obrazic kogokolwiek. Zdaje sobie sprawe, ze zawartosc moze, w niektorych przypadkach, przekreslic moja osobe w procesie rekrutacyjnym, ale, coz, widocznie tak musi byc ;)
+
+EN: to run the project, type: mvn spring-boot:run
