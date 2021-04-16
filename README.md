@@ -1,11 +1,17 @@
 # MebleKOMAR
 Zaliczeniowy projekt kursu Java Web Developer.
-Jest to projekt Maven, z uzyciem m.in. Spring + Security, Hibernate, HTML, CSS, PostgreSQL.
-Aplikacja korzysta z AWS, wiec nie ma koniecznosci zakladania lokalnej bazy danych.
+Jest to projekt Maven, z użyciem m.in. Spring + Security, Hibernate, HTML, CSS, PostgreSQL.
+Aplikacja korzysta z AWS, więc nie ma konieczności zakładania lokalnej bazy danych.
 
     Logowanie jako admin:       login: admin@wp.pl  pass: admin
     Logowanie jako uzytkownik:  login: ww@ww.ww     pass: ww
 
-Projekt nie jest zakonczony, takze mile widziane sa wszelkie porady czy uwagi!
+Projekt nie jest zakończony, także mile widziane są wszelkie porady czy uwagi!
 
-Zawarte opisy(kontrybutor nie wspoltworzyl ich = jest "czysty"), sa w formie satyrycznej i nie maja na celu obrazac czy ponizac kogokolwiek. Zdaje sobie sprawe, ze zawartosc moze, w niektorych przypadkach, przekreslic moja osobe w procesie rekrutacyjnym, ale, coz, widocznie tak musi byc ;)
+
+Zawarte opisy (kontrybutor nie współtworzył ich = jest „czysty”), są w formie satyrycznej i nie maja na celu obrazić kogokolwiek. Tak, zdaję sobie sprawę, że zawartość może, w niektórych przypadkach, przekreślić moją osobę w oczach (nie)pewnych osób ;)
+
+
+    EN: to 🏃 the project, type: 
+    mvn spring-boot:run
+    
