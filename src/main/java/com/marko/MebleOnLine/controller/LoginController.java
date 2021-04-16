@@ -61,9 +61,9 @@ public class LoginController {
 //        model.addAttribute("currentUser", loggedInUser.getEmail());
 //        session.setAttribute("userId", loggedInUser.getId());
 
+		
 		UsernamePasswordAuthenticationToken authReq = new UsernamePasswordAuthenticationToken(uzytkownik.getEmail(), uzytkownik.getHaslo());
 		Authentication auth = authManager.authenticate(authReq);
-		
 		
 		Uzytkownik loggedInUser = ((MyUserDetails) authReq.getPrincipal()).getUserDetails();
 		model.addAttribute("currentUser", loggedInUser.getImie());
