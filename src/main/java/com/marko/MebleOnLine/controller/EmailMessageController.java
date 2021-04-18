@@ -43,7 +43,6 @@ public class EmailMessageController {
 		
 //		model.addAttribute("message", "A plain text email has been sent");
 
-        // TODO: save project in DB here
         return "message-send";
     }
 }
