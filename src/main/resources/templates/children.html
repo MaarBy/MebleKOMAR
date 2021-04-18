@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="Style.css">
+<style>
+body  {
+  background-image: url("logowanie.png");
+  padding: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<title>Meble dzieciece</title>
+</head>
+<body>
+		<div class="header">
+
+		<div class="logo" align="center">
+			<img src="images/logo.png" width="325">		
+		</div>
+			<div class="sticky">
+		
+	<section>
+		<nav>
+			<ul>
+				<li><a href="/">Strona główna</a></li>
+				<li><a href="/living-room">Salon</a></li>
+				<li><a href="/bedroom">Sypialnia</a></li>
+				<li><a class="active" href="/children">Pokój Dziecięcy</a></li>
+				<li><a href="/rejestracja">Rejestracja</a></li>
+				<li><a href="/logowanie">Logowanie</a></li>
+				<li><a href="/koszyk">Koszyk</a></li>
+				<li><a href="/contact">Kontakt</a></li>
+				<li><a href="/logout">Wyloguj</a></li>
+</ul>
+			<ul>
+			<div class="mainNavy">				
+				<li><a action="action" type="button" onclick="history.go(-1);">Wstecz</a></li>					
+</ul>
+                </nav>
+			</section>
+		</div>
+	</div>
+	</div>
+  
+  
+  
+  
+  
+  
+  <div class="prods">
+		<table>
+			
+
+			<tr th:each="produkt : ${produkty}">
+				<td><img class="image" th:src="${produkt.zdjecie}" alt="foto" style="width:420px;height:280px"></td>
+				<td><h3><b><span th:text="${produkt.nazwa}"></span></b></h3>
+							
+			<div class="malina">				
+				<span th:text="${produkt.opis}"></span><br><br>
+			</div>
+			
+				<span th:text="${produkt.cena} + zl"></span><br><br>
+					<form th:action="@{dodajDoKoszyka}" method="post">
+						<input type="hidden" name="id" th:value="${produkt.id}" />
+					 <button th:action="@{dodajDoKoszyka}" class="btn btn-success"> <i class="fa fa-arrow-right" ></i>&nbsp;&nbsp;Dodaj do koszyka</button>
+					 <!-- -<button  type="submit" class="btn btn-success btn-lg"><i class="fa fa-arrow-circle-o-right" ></i>&nbsp;Dodaj do koszyka</button> -->
+					<br><br>
+					</td>
+					</form>
+				
+			</tr>
+
+		</table>
+	</div>
+	
+	
+	
+	
+	
+   </div>         
+   </div>         
+            
+            
+            
+	<!--  	<div class="prods">
+		<table>
+			<tr th:each="produkt : ${produkty}">
+				<td><img class="image" th:src="${produkt.zdjecie}" alt="foto" style="width:300px;height:200px"></td>
+				<td><b><span th:text="${produkt.nazwa}"></span></b></td>
+				<td><span th:text="${produkt.opis}"></span></td>
+				<td><span th:text="${produkt.cena} + zl"></span></td>
+				<th>
+					<form th:action="@{dodajDoKoszyka}" method="post">
+						<input type="hidden" name="id" th:value="${produkt.id}" />
+					 <button th:action="@{dodajDoKoszyka}" class="btn btn-success"> <i class="fa fa-arrow-right" ></i>&nbsp;&nbsp;Dodaj do koszyka</button>
+				</table>
+					</form>
+				</th>
+			</tr>
+	</div>-->
+	</div>
+</body>
+</html>
